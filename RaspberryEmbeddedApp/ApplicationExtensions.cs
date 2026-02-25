@@ -133,14 +133,12 @@ public static partial class ApplicationExtensions
         var environment = host.Services.GetRequiredService<IHostEnvironment>();
         ThreadPool.GetMinThreads(out var workerThreads, out var completionPortThreads);
 
-#pragma warning disable CA1873
         log.InfoStartup();
         log.InfoStartupSettingsRuntime(RuntimeInformation.OSDescription, RuntimeInformation.FrameworkDescription, RuntimeInformation.RuntimeIdentifier);
         log.InfoStartupSettingsGC(GCSettings.IsServerGC, GCSettings.LatencyMode, GCSettings.LargeObjectHeapCompactionMode);
         log.InfoStartupSettingsThreadPool(workerThreads, completionPortThreads);
         log.InfoStartupApplication(environment.ApplicationName, typeof(App).Assembly.GetName().Version);
         log.InfoStartupEnvironment(environment.EnvironmentName, environment.ContentRootPath);
-#pragma warning restore CA1873
 
         // Navigate to view
         var navigator = host.Services.GetRequiredService<Navigator>();
