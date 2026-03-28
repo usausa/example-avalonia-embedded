@@ -1,8 +1,8 @@
 namespace RaspberryEmbeddedApp;
 
-using Smart.Avalonia.ViewModels;
-
 using RaspberryEmbeddedApp.Devices.Input;
+
+using Smart.Avalonia.ViewModels;
 
 [ObservableGeneratorOption(Reactive = true, ViewModel = true)]
 public class DebugWindowViewModel : ExtendViewModelBase

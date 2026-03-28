@@ -6,14 +6,14 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
+using RaspberryEmbeddedApp.Devices.Input;
+using RaspberryEmbeddedApp.Settings;
+using RaspberryEmbeddedApp.Views;
+
 using Serilog;
 
 using Smart.Avalonia;
 using Smart.Resolver;
-
-using RaspberryEmbeddedApp.Devices.Input;
-using RaspberryEmbeddedApp.Settings;
-using RaspberryEmbeddedApp.Views;
 
 public static partial class ApplicationExtensions
 {
